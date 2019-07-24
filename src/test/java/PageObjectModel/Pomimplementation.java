@@ -5,13 +5,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Pomimplementation {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 
 System.setProperty("webdriver.chrome.driver","C:\\Users\\aravind.g.kumar\\Desktop\\Browser Drivers\\chromedriver_win32\\chromedriver.exe");
 WebDriver  driver=new ChromeDriver();
 PageClass Pobject = new PageClass(driver);
 driver.get("http://demowebshop.tricentis.com/");
 driver.manage().window().maximize();
+Thread.sleep(2000);
 Pobject.clicklink();
 String username="aravind.guggilla57@gmail.com";
 Pobject.typename(username);
